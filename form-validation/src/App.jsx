@@ -6,7 +6,7 @@ function App() {
     <div>
       <Forms />
     </div>
-  );
+  )
 }
 
 export default App;
