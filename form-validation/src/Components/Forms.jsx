@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 
 function Forms() {
   const passwordRegex = /[@#$%^&*()]/;
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
   const {
     register,
     handleSubmit,
@@ -42,7 +43,10 @@ function Forms() {
           type="email"
           name="email"
           placeholder="Enter Your Email"
-          {...register("email", registerOptions.email)}
+          {...register("email",{ ...registerOptions.email, pattern: {
+            value: emailRegex,
+            message : "Invalin Email address format with include @ character"
+          }})}
         />
         <small>{errors?.email && errors.email.message}</small>
         <br /> <br />
