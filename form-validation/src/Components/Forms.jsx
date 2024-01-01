@@ -2,8 +2,8 @@ import React from "react";
 import { useForm } from "react-hook-form";
 
 function Forms() {
-    const passwordRegex = /[@#$%^&*()]/
-   
+  const passwordRegex = /[@#$%^&*()]/;
+
   const {
     register,
     handleSubmit,
@@ -12,7 +12,7 @@ function Forms() {
   } = useForm();
   const handleRegistration = (data) => {
     console.log(data);
-       reset();
+    reset();
   };
   const handleError = (errors) => {};
   const registerOptions = {
