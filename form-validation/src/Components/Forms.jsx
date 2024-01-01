@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 
 function Forms() {
   const passwordRegex = /[@#$%^&*()]/;
-
   const {
     register,
     handleSubmit,
